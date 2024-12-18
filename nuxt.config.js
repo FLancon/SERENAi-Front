@@ -1,6 +1,6 @@
 import Aura from '@primevue/themes/aura';
 export default defineNuxtConfig({
-    compatibilityDate: '2024-10-13',
+    compatibilityDate: '2024-12-17',
     modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@nuxtjs/supabase'],
 
     runtimeConfig: {
