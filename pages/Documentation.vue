@@ -1,3 +1,8 @@
+<script setup>
+definePageMeta({
+    layout: 'empty'
+});
+</script>
 <template>
     <div class="card">
         <div class="font-semibold text-2xl mb-4">Documentation</div>

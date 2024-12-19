@@ -1,8 +1,6 @@
 <script setup>
-import { useLayout } from '@/layout/composables/layout';
-import { computed, ref, watch } from 'vue';
 
-const { layoutConfig, layoutState, isSidebarActive } = useLayout();
+const { layoutConfig, layoutState, isSidebarActive, resetMenu } = useLayout();
 
 const outsideClickListener = ref(null);
 
@@ -28,9 +26,7 @@ function bindOutsideClickListener() {
     if (!outsideClickListener.value) {
         outsideClickListener.value = (event) => {
             if (isOutsideClicked(event)) {
-                layoutState.overlayMenuActive = false;
-                layoutState.staticMenuMobileActive = false;
-                layoutState.menuHoverActive = false;
+                resetMenu();
             }
         };
         document.addEventListener('click', outsideClickListener.value);

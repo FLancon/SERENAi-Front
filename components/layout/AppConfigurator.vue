@@ -1,16 +1,17 @@
 <script setup>
-import { useLayout } from '@/layout/composables/layout';
+const primaryColorCookie = useCookie('primaryColor', { expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) });
 import { $t, updatePreset, updateSurfacePalette } from '@primevue/themes';
 import Aura from '@primevue/themes/aura';
 import Lara from '@primevue/themes/lara';
 import { ref } from 'vue';
 
-const { layoutConfig, isDarkTheme } = useLayout();
+const { layoutConfig, setPrimary, setSurface, setPreset, isDarkTheme, setMenuMode } = useLayout();
 
 const presets = {
     Aura,
     Lara
 };
+
 const preset = ref(layoutConfig.preset);
 const presetOptions = ref(Object.keys(presets));
 
@@ -76,6 +77,7 @@ const surfaces = ref([
 ]);
 
 function getPresetExt() {
+
     const color = primaryColors.value.find((c) => c.name === layoutConfig.primary);
 
     if (color.name === 'noir') {
@@ -167,9 +169,10 @@ function getPresetExt() {
 
 function updateColors(type, color) {
     if (type === 'primary') {
-        layoutConfig.primary = color.name;
+        primaryColorCookie.value = color;        
+        setPrimary(color.name);
     } else if (type === 'surface') {
-        layoutConfig.surface = color.name;
+        setSurface(color.name);
     }
 
     applyTheme(type, color);
@@ -184,7 +187,7 @@ function applyTheme(type, color) {
 }
 
 function onPresetChange() {
-    layoutConfig.preset = preset.value;
+    setPreset(preset.value);
     const presetValue = presets[preset.value];
     const surfacePalette = surfaces.value.find((s) => s.name === layoutConfig.surface)?.palette;
 
@@ -192,8 +195,22 @@ function onPresetChange() {
 }
 
 function onMenuModeChange() {
-    layoutConfig.menuMode = menuMode.value;
+    setMenuMode(menuMode.value);
 }
+
+onMounted(async () => {
+    if(primaryColorCookie.value) {
+        const initialColor = primaryColors.value.find(color => color.name === primaryColorCookie.value.name);
+        if (initialColor) {
+            await nextTick()
+            updateColors('primary', initialColor);
+            
+        }
+
+    }
+})
+
+
 </script>
 
 <template>
@@ -232,6 +249,7 @@ function onMenuModeChange() {
                     ></button>
                 </div>
             </div>
+            <!--
             <div class="flex flex-col gap-2">
                 <span class="text-sm text-muted-color font-semibold">Presets</span>
                 <SelectButton v-model="preset" @change="onPresetChange" :options="presetOptions" :allowEmpty="false" />
@@ -240,6 +258,7 @@ function onMenuModeChange() {
                 <span class="text-sm text-muted-color font-semibold">Menu Mode</span>
                 <SelectButton v-model="menuMode" @change="onMenuModeChange" :options="menuModeOptions" :allowEmpty="false" optionLabel="label" optionValue="value" />
             </div>
+            -->
         </div>
     </div>
 </template>

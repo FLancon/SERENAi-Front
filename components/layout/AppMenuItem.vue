@@ -1,11 +1,10 @@
 <script setup>
-import { useLayout } from '@/layout/composables/layout';
 import { onBeforeMount, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
-const { layoutState, setActiveMenuItem, toggleMenu } = useLayout();
+const { layoutState, setActiveMenuItem, onMenuToggle } = useLayout();
 
 const props = defineProps({
     item: {
@@ -51,7 +50,7 @@ function itemClick(event, item) {
     }
 
     if ((item.to || item.url) && (layoutState.staticMenuMobileActive || layoutState.overlayMenuActive)) {
-        toggleMenu();
+        onMenuToggle();
     }
 
     if (item.command) {
