@@ -32,7 +32,8 @@
       "product": "Produit",
       "statistics": "Statistiques",
       "administration": "Administration",
-      "users": "Utilisateurs"
+      "users": "Utilisateurs",
+      "messages": "Messages"
     },
     "form":{
       "welcomeTo":"Bienvenue sur",
