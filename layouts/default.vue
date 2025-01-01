@@ -1,5 +1,4 @@
 <script setup>
-
 const { layoutConfig, layoutState, isSidebarActive, resetMenu } = useLayout();
 
 const outsideClickListener = ref(null);
@@ -56,7 +55,7 @@ function isOutsideClicked(event) {
             <div class="layout-main">
                 <NuxtPage />
             </div>
-            <layout-app-footer></layout-app-footer>
+            <!-- <layout-app-footer></layout-app-footer> -->
         </div>
         <div class="layout-mask animate-fadein"></div>
     </div>
