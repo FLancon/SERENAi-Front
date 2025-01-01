@@ -11,15 +11,14 @@ const createMenuModel = () => [
         label: t('menu.home'),
         items: [
             { label: t('menu.dashboard'), icon: 'pi pi-fw pi-home', to: '/pages/dashboard' },
+            { label: t('menu.messages'), icon: 'pi pi-fw pi-inbox', to: '/pages/messages' },
             { label: t('menu.product'), icon: 'pi pi-fw pi-shopping-bag', to: '/pages/products' },
             { label: t('menu.statistics'), icon: 'pi pi-fw pi-chart-bar', to: '/pages/statistic' }
         ]
     },
     {
         label: t('menu.administration'),
-        items: [
-            { label: t('menu.users'), icon: 'pi pi-fw pi-users', to: '/pages/admin/users' }
-        ]
+        items: [{ label: t('menu.users'), icon: 'pi pi-fw pi-users', to: '/pages/admin/users' }]
     }
 ];
 
