@@ -1,0 +1,138 @@
+{
+  "conversations": [
+    {
+      "id": 1,
+      "guest": "Sophie Martin",
+      "apiSourceId": 19,
+      "online": true,
+      "lastMessage": "Merci pour les informations concernant le code WiFi !",
+      "lastMessageTime": "2 min ago",
+      "messages": [
+        {
+          "id": 1,
+          "content": "Bonjour, pourriez-vous me donner le code WiFi s'il vous plaît ?",
+          "time": "10:30 AM",
+          "source": "guest"
+        },
+        {
+          "id": 2,
+          "content": "Bien sûr ! Le code WiFi est inscrit sur le miroir de la salle de bain : '1234'",
+          "time": "10:35 AM",
+          "source": "host"
+        },
+        {
+          "id": 3,
+          "content": "Merci pour les informations concernant le code WiFi !",
+          "time": "10:36 AM",
+          "source": "guest"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "guest": "Lucas Bernard",
+      "apiSourceId": 10,
+      "online": false,
+      "lastMessage": "Est-il possible d'avoir un late check-out demain ?",
+      "lastMessageTime": "1h ago",
+      "messages": [
+        {
+          "id": 1,
+          "content": "Bonjour, j'espère que vous passez un bon séjour !",
+          "time": "09:15 AM",
+          "source": "host"
+        },
+        {
+          "id": 2,
+          "content": "Oui très bien merci ! Est-il possible d'avoir un late check-out demain ?",
+          "time": "09:45 AM",
+          "source": "guest"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "guest": "Emma Dubois",
+      "apiSourceId": 14,
+      "online": true,
+      "lastMessage": "Parfait, merci beaucoup pour votre aide !",
+      "lastMessageTime": "3h ago",
+      "messages": [
+        {
+          "id": 1,
+          "content": "Bonjour, y a-t-il un parking gratuit près de l'appartement ?",
+          "time": "07:20 AM",
+          "source": "guest"
+        },
+        {
+          "id": 2,
+          "content": "Bonjour Emma, oui il y a un parking gratuit juste en face de l'immeuble !",
+          "time": "07:25 AM",
+          "source": "host"
+        },
+        {
+          "id": 3,
+          "content": "Parfait, merci beaucoup pour votre aide !",
+          "time": "07:26 AM",
+          "source": "guest"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "guest": "Thomas Petit",
+      "apiSourceId": 19,
+      "online": false,
+      "lastMessage": "D'accord, je vais essayer de résoudre le problème.",
+      "lastMessageTime": "5h ago",
+      "messages": [
+        {
+          "id": 1,
+          "content": "Bonjour, je n'arrive pas à me connecter au WiFi",
+          "time": "05:10 AM",
+          "source": "guest"
+        },
+        {
+          "id": 2,
+          "content": "Avez-vous bien entré le code '1234' ? Il est sensible à la casse.",
+          "time": "05:15 AM",
+          "source": "host"
+        },
+        {
+          "id": 3,
+          "content": "D'accord, je vais essayer de résoudre le problème.",
+          "time": "05:20 AM",
+          "source": "guest"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "guest": "Julie Moreau",
+      "apiSourceId": 0,
+      "online": true,
+      "lastMessage": "Merci, à demain alors !",
+      "lastMessageTime": "1d ago",
+      "messages": [
+        {
+          "id": 1,
+          "content": "Bonjour, je voulais confirmer l'heure d'arrivée pour demain",
+          "time": "Yesterday at 2:30 PM",
+          "source": "guest"
+        },
+        {
+          "id": 2,
+          "content": "Bonjour Julie, vous pouvez arriver à partir de 15h",
+          "time": "Yesterday at 2:35 PM",
+          "source": "host"
+        },
+        {
+          "id": 3,
+          "content": "Merci, à demain alors !",
+          "time": "Yesterday at 2:36 PM",
+          "source": "guest"
+        }
+      ]
+    }
+  ]
+}
